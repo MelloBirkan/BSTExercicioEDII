@@ -74,7 +74,7 @@ double BSTFuncionario::calcularGastoSalarios() const {
 }
 
 // Implementação do método contarFuncionariosPorSexo da classe BSTFuncionario.
-int BSTFuncionario::contarFuncionariosPorSexo(char sexo) const {
+int BSTFuncionario::contarFuncionariosPorSexo(char sexo) const { 
   int totalFuncionarios = 0;
   percursoInOrder([&totalFuncionarios, sexo](const Funcionario &funcionario) {
     if (funcionario.getSexo() == sexo) {
