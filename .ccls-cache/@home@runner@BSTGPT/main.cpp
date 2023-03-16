@@ -2,6 +2,7 @@
 #include "Funcionario.h"
 #include <iostream>
 
+// Função auxiliar para imprimir as informações do funcionário
 void imprimirFuncionario(const Funcionario &funcionario) {
   std::cout << "ID: " << funcionario.getIdentificacao() << std::endl;
   std::cout << "Categoria: " << funcionario.getCategoria() << std::endl;
@@ -14,8 +15,10 @@ void imprimirFuncionario(const Funcionario &funcionario) {
 }
 
 int main() {
+  // Criação da árvore binária de busca de funcionários
   BSTFuncionario bst;
 
+  // Criação dos funcionários
   Funcionario f1(1, 'P', "João Silva", "Gerente", 'M', 35, 4500.00);
   Funcionario f2(2, 'H', "Maria Santos", "Analista", 'F', 30, 3500.00);
   Funcionario f3(3, 'O', "Carlos Pereira", "Desenvolvedor", 'M', 28, 4000.00);
@@ -30,7 +33,7 @@ int main() {
   Funcionario f9(9, 'O', "André Almeida", "Redator", 'M', 31, 2800.00);
   Funcionario f10(10, 'H', "Cláudia Costa", "Analista de Marketing", 'F', 34,
                   4000.00);
-
+  // Inserção dos funcionários na árvore
   bst.inserir(f1);
   bst.inserir(f2);
   bst.inserir(f3);
@@ -44,6 +47,7 @@ int main() {
 
   int opcao;
   do {
+    // Exibe o menu de opções
     std::cout << "Menu:" << std::endl;
     std::cout << "1 - Listar funcionários em ordem crescente de ID"
               << std::endl;
@@ -55,15 +59,19 @@ int main() {
     std::cout << "6 - Adicionar funcionário" << std::endl;
     std::cout << "0 - Sair" << std::endl;
     std::cout << "Digite a opção desejada: ";
+    // Lê a opção escolhida pelo usuário
     std::cin >> opcao;
 
+    // Executa a ação correspondente à opção escolhida
     switch (opcao) {
     case 1:
+      // Listar funcionários em ordem crescente de ID
       std::cout << "Funcionários em ordem crescente de ID:" << std::endl
                 << std::endl;
       bst.percursoInOrder(imprimirFuncionario);
       break;
     case 2: {
+      // Calcular gasto total com salários
       double gastoTotalSalarios = bst.calcularGastoSalarios();
       std::cout << "Gasto total com salários: R$" << gastoTotalSalarios
                 << std::endl
@@ -71,6 +79,7 @@ int main() {
       break;
     }
     case 3: {
+      // Contar funcionários por sexo
       char sexo;
       std::cout << "Informe o sexo (F - feminino, M - masculino): ";
       std::cin >> sexo;
@@ -81,6 +90,7 @@ int main() {
       break;
     }
     case 4: {
+      // Contar funcionários por categoria
       char categoria;
       std::cout << "Informe a categoria (P - Presencial, O - Home Office, H - "
                    "Híbrido): ";
@@ -92,6 +102,7 @@ int main() {
       break;
     }
     case 5: {
+      // Exibir funcionários com idade maior que a informada
       int idade;
       std::cout << "Informe a idade mínima: ";
       std::cin >> idade;
@@ -102,6 +113,7 @@ int main() {
       break;
     }
     case 6: {
+      // Adicionar funcionário
       int id, idade;
       char categoria, sexo;
       double salario;
@@ -135,13 +147,15 @@ int main() {
     }
 
     case 0:
+      // Sair do programa
       std::cout << "Saindo..." << std::endl;
       break;
     default:
+      // Opção inválida
       std::cout << "Opção inválida!" << std::endl << std::endl;
       break;
     }
-  } while (opcao != 0);
+  } while (opcao != 0); // Repete até que a opção "Sair" seja escolhida
 
   return 0;
 }

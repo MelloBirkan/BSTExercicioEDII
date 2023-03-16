@@ -1,0 +1,52 @@
+Arquivo: Funcionario.h
+
+Este arquivo define a classe Funcionario, que contém informações sobre os funcionários, como identificação, categoria, nome, cargo, sexo, idade e salário.
+
+
+Arquivo: Funcionario.cpp
+
+Este arquivo implementa os métodos da classe Funcionario, como o construtor para inicializar os atributos e os métodos "get" para acessar os valores desses atributos.
+
+
+Arquivo: BSTFuncionario.h
+
+Este arquivo define a classe BSTFuncionario, que implementa uma árvore binária de busca para armazenar objetos da classe Funcionario. A classe possui um construtor e destrutor, métodos para inserir um novo funcionário, percorrer a árvore em ordem e realizar cálculos e contagens específicas com base nos atributos dos funcionários.
+
+
+Arquivo: BSTFuncionario.cpp
+
+Este arquivo implementa os métodos da classe BSTFuncionario, incluindo os métodos auxiliares para inserir um novo funcionário a partir de um nó específico e percorrer a árvore em ordem a partir de um nó específico. Além disso, implementa os métodos para calcular o gasto total com salários, contar funcionários por sexo e categoria e exibir funcionários com idade maior que a informada.
+
+
+Arquivo: main.cpp
+
+Este arquivo contém a função main(), que cria uma instância da classe BSTFuncionario, insere alguns funcionários e apresenta um menu ao usuário para realizar diferentes ações, como listar funcionários, calcular gastos totais com salários, contar funcionários por sexo e categoria, e exibir funcionários com idade maior que a informada. A função imprimirFuncionario é usada para imprimir as informações de um funcionário.
+
+README:
+Sistema de Gerenciamento de Funcionários
+Este projeto implementa um sistema simples de gerenciamento de funcionários usando uma árvore binária de busca (BST). O objetivo é permitir a realização de algumas operações e estatísticas relacionadas aos funcionários de uma empresa.
+
+Funcionalidades
+Inserir funcionários na árvore binária de busca
+Listar funcionários em ordem crescente de identificação
+Calcular o gasto total com salários dos funcionários
+Contar o número de funcionários por sexo
+Contar o número de funcionários por categoria (Presencial, Home Office, Híbrido)
+Exibir funcionários com idade maior que a informada
+
+Estrutura de Arquivos
+O projeto é composto pelos seguintes arquivos:
+
+Funcionario.h: Define a classe Funcionario, que armazena informações sobre os funcionários.
+Funcionario.cpp: Implementa os métodos da classe Funcionario.
+BSTFuncionario.h: Define a classe BSTFuncionario, que implementa uma árvore binária de busca para armazenar objetos da classe Funcionario.
+BSTFuncionario.cpp: Implementa os métodos da classe BSTFuncionario.
+main.cpp: Contém a função main(), que cria uma instância da classe BSTFuncionario, insere alguns funcionários e apresenta um menu ao usuário para realizar diferentes ações.
+
+Como compilar e executar
+Para compilar o projeto, você deve ter um compilador C++ compatível com C++11 ou posterior. Abra um terminal na pasta do projeto e digite o seguinte comando:
+g++ -std=c++11 -o sistema_funcionarios main.cpp Funcionario.cpp BSTFuncionario.cpp
+
+Para executar o projeto, digite o seguinte comando no terminal:
+./sistema_funcionarios
+
